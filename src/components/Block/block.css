@@ -1,0 +1,7 @@
+.todo-block {
+    cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+}
