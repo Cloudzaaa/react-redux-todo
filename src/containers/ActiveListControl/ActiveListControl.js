@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import ListControl from '../../components/ListControl';
-import {TODO_FILTER_SWITCH} from '../../actions/actions';
+import {TODO_FILTER_SWITCH} from '../../actions';
 
 const mapStateToProps = ({filter}) => {
   return {

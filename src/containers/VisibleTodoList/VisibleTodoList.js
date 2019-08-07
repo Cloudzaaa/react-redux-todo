@@ -1,5 +1,5 @@
 import React from 'react';
-import {TODO_DELETE, TODO_UPD} from '../../actions/actions';
+import {TODO_DELETE, TODO_UPD} from '../../actions';
 import {connect} from 'react-redux';
 import TodoList from '../../components/TodoList/TodoList';
 

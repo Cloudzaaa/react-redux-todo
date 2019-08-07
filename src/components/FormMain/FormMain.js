@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {TextInputField, Pane, Button, Heading} from 'evergreen-ui';
-import {TODO_ADD} from '../../actions/actions';
+import {TODO_ADD} from '../../actions';
 import {connect} from 'react-redux';
 
 class FormMain extends Component {

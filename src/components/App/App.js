@@ -9,6 +9,8 @@ import {Provider} from 'react-redux';
 
 class App extends Component {
   render() {
+    console.log(store.getState());
+
     return (
       <Provider store={store}>
         <Pane className="App" display="flex" flex-direction="row" marginTop={50}>
