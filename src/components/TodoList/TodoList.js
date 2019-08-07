@@ -17,13 +17,8 @@ const TodoList = ({todos, TODO_UPD, TODO_DELETE}) => {
   };
 
   return (
-    <Pane
-      width={400}
-    >
-      <Heading
-        size={600}
-        marginBottom={15}
-      >
+    <Pane width="100%" marginTop={15}>
+      <Heading size={600} marginBottom={15}>
         Todo list
       </Heading>
       {renderBlocks()}

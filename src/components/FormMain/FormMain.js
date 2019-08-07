@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {TextInputField, Pane, Button, Heading} from 'evergreen-ui';
+import {TextInput, Pane, Button, Heading} from 'evergreen-ui';
 import {TODO_ADD} from '../../actions';
 import {connect} from 'react-redux';
 
@@ -20,9 +20,8 @@ class FormMain extends Component {
   render() {
     return (
       <Pane
-        width={200}
-        marginLeft={30}
-        marginRight={30}
+        marginLeft={20}
+        marginRight={20}
       >
         <Heading
           size={600}
@@ -32,8 +31,7 @@ class FormMain extends Component {
         </Heading>
 
         <form onSubmit={this.onSubmit}>
-          <TextInputField
-            label="Task text"
+          <TextInput
             name="text"
             placeholder="Task text..."
             value={this.state.text}
@@ -45,6 +43,7 @@ class FormMain extends Component {
             appearance="primary"
             intent="success"
             type="submit"
+            marginLeft={15}
           >
             Add
           </Button>

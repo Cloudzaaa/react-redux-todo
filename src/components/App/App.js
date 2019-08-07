@@ -9,14 +9,12 @@ import {Provider} from 'react-redux';
 
 class App extends Component {
   render() {
-    console.log(store.getState());
-
     return (
       <Provider store={store}>
-        <Pane className="App" display="flex" flex-direction="row" marginTop={50}>
-          <FormMain />
-          <VisibleTodoList />
-          <ActiveListControl />
+        <Pane className="App" marginTop={50} display="flex" justifyContent="center" alignItems="center" flexDirection="column" width="400px" marginLeft="auto" marginRight="auto">
+          <FormMain/>
+          <VisibleTodoList/>
+          <ActiveListControl/>
         </Pane>
       </Provider>
     );

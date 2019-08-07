@@ -7,16 +7,13 @@ const Todo = ({complete, text, onBlockClick, onBlockDelete}) => {
   return (
     <Pane
       className="todo-block"
-      display="flex"
-      justifyContent="space-between"
-      alignItems="center"
-      width="100%"
       onClick={onBlockClick}
-      marginBottom={15}
     >
       <Paragraph
         className={complete}
         width="100%"
+        textAlign="left"
+        padding={10}
       >
         {text}
       </Paragraph>
