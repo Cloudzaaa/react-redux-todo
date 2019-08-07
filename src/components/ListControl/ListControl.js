@@ -8,6 +8,7 @@ const ListControl = ({filter, onFilterSwitch}) => {
         options={[{label: 'All', value: 'ALL'}, {label: 'Completed', value: 'COMPLETED'}]}
         value={filter}
         onChange={onFilterSwitch}
+        marginTop={10}
       />
     )
 };

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {TextInput, Pane, Button, Heading} from 'evergreen-ui';
-import {TODO_ADD} from '../../actions';
+import {TODO_ADD, TODO_DELETE_ALL} from '../../actions';
 import {connect} from 'react-redux';
 
 class FormMain extends Component {
@@ -39,7 +39,8 @@ class FormMain extends Component {
             required
           />
 
-          <Button
+          <Pane marginTop={10}>
+            <Button
             appearance="primary"
             intent="success"
             type="submit"
@@ -47,10 +48,25 @@ class FormMain extends Component {
           >
             Add
           </Button>
+          </Pane>
 
         </form>
+        <Button
+          appearance="primary"
+          intent="danger"
+          marginLeft={15}
+          onClick={this.props.onDeleteAll}
+        >
+          Clean List
+        </Button>
       </Pane>
     );
+  }
+};
+
+const mapStateToProps = ({todos}) => {
+  return {
+    todos,
   }
 };
 
@@ -59,7 +75,11 @@ const mapDispatchToProps = (dispatch) => {
     onSubmit: (item) => {
       dispatch(TODO_ADD(item))
     },
+
+    onDeleteAll: () => {
+      dispatch(TODO_DELETE_ALL())
+    },
   }
 };
 
-export default connect(null, mapDispatchToProps)(FormMain);
+export default connect(mapStateToProps, mapDispatchToProps)(FormMain);

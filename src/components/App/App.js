@@ -13,8 +13,8 @@ class App extends Component {
       <Provider store={store}>
         <Pane className="App" marginTop={50} display="flex" justifyContent="center" alignItems="center" flexDirection="column" width="400px" marginLeft="auto" marginRight="auto">
           <FormMain/>
-          <VisibleTodoList/>
           <ActiveListControl/>
+          <VisibleTodoList/>
         </Pane>
       </Provider>
     );

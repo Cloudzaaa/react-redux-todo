@@ -18,6 +18,10 @@ const todos = (state = initialState, action) => {
 
     case actionTypes.TODO_DELETE :
       return state.filter(({id}) => id !== action.payload);
+
+    case actionTypes.TODO_DELETE_ALL :
+      return [];
+
     default:
       return state
   }

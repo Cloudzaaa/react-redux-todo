@@ -3,15 +3,16 @@ export const actionTypes = {
   TODO_UPD: 'TODO_UPD',
   TODO_DELETE: 'TODO_DELETE',
   TODO_FILTER_SWITCH: 'TODO_FILTER_SWITCH',
+  TODO_DELETE_ALL: 'TODO_DELETE_ALL',
 };
 
-let todoID = 0;
+let nextId = 0;
 
 export const TODO_ADD = (item) => ({
   type: actionTypes.TODO_ADD,
   payload: {
     ...item,
-    id: todoID++,
+    id: nextId++,
     complete: false,
   },
 });
@@ -29,4 +30,8 @@ export const TODO_DELETE = (id) => ({
 export const TODO_FILTER_SWITCH = (value) => ({
   type: actionTypes.TODO_FILTER_SWITCH,
   payload: value,
+});
+
+export const TODO_DELETE_ALL = () => ({
+  type: actionTypes.TODO_DELETE_ALL,
 });
