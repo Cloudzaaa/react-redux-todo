@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
-import BlockList from '../BlockList';
+import VisibleTodoList from '../../containers/VisibleTodoList';
+import ActiveListControl from '../../containers/ActiveListControl';
 import FormMain from '../FormMain';
 import {Pane} from 'evergreen-ui';
 import store from '../../store';
@@ -12,7 +13,8 @@ class App extends Component {
       <Provider store={store}>
         <Pane className="App" display="flex" flex-direction="row" marginTop={50}>
           <FormMain />
-          <BlockList />
+          <VisibleTodoList />
+          <ActiveListControl />
         </Pane>
       </Provider>
     );

@@ -24,12 +24,18 @@ class FormMain extends Component {
         marginLeft={30}
         marginRight={30}
       >
-        <Heading size={600}>Add todo</Heading>
+        <Heading
+          size={600}
+          marginBottom={15}
+        >
+          Add todo
+        </Heading>
+
         <form onSubmit={this.onSubmit}>
           <TextInputField
-            label="First name"
+            label="Task text"
             name="text"
-            placeholder="First name"
+            placeholder="Task text..."
             value={this.state.text}
             onChange={this.handleInput}
             required
@@ -40,7 +46,7 @@ class FormMain extends Component {
             intent="success"
             type="submit"
           >
-            Send
+            Add
           </Button>
 
         </form>

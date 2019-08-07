@@ -2,6 +2,10 @@
     cursor: pointer;
 }
 
+.todo-block:hover {
+    background-color: #fcf7f0;
+}
+
 .completed {
     text-decoration: line-through;
 }

@@ -1,24 +1,25 @@
 import React from 'react';
-import {Pane, Icon} from 'evergreen-ui';
+import {Pane, Icon, Paragraph} from 'evergreen-ui';
 import PropTypes from 'prop-types';
-import './block.css';
+import './todo.css';
 
-const Block = ({complete, text, onBlockClick, onBlockDelete}) => {
+const Todo = ({complete, text, onBlockClick, onBlockDelete}) => {
   return (
     <Pane
       className="todo-block"
       display="flex"
       justifyContent="space-between"
       alignItems="center"
-      width={300}
+      width="100%"
+      onClick={onBlockClick}
+      marginBottom={15}
     >
-      <p
-        onClick={onBlockClick}
+      <Paragraph
         className={complete}
         width="100%"
       >
         {text}
-      </p>
+      </Paragraph>
       <Pane display="flex" justifyContent="space-between" alignItems="center" width={80}>
         <Pane display="flex">
           <Icon
@@ -34,10 +35,10 @@ const Block = ({complete, text, onBlockClick, onBlockDelete}) => {
   );
 };
 
-Block.propTypes = {
+Todo.propTypes = {
   text: PropTypes.string.isRequired,
   complete: PropTypes.string,
   onBlockClick: PropTypes.func.isRequired,
 };
 
-export default Block;
+export default Todo;
