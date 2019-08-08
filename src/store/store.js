@@ -1,20 +1,19 @@
 import {createStore} from 'redux';
-import todoApp from '../reducers'
-import {loadState, saveState} from '../localStorage';
-import {throttle} from 'lodash';
+import todoApp from '../reducers';
+import {persistStore, persistReducer} from 'redux-persist'
+import storage from 'redux-persist/lib/storage' // defaults to localStorage for web
 
-const preloadState = loadState();
+const persistConfig = {
+  key: 'root',
+  storage,
+};
 
-let store = createStore(todoApp, preloadState);
+const persistedReducer = persistReducer(persistConfig, todoApp);
 
-store.subscribe(
-  throttle(() => {
-    const {todos, filter} = store.getState();
-    console.log(todos);
-    saveState({
-      todos,
-      filter,
-    });
-  }, 1000));
+let store = createStore(
+  persistedReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
+let persistor = persistStore(store);
 
 export default store;
