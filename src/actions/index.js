@@ -1,3 +1,5 @@
+import {v4} from 'node-uuid';
+
 export const actionTypes = {
   TODO_ADD: 'TODO_ADD',
   TODO_UPD: 'TODO_UPD',
@@ -6,13 +8,12 @@ export const actionTypes = {
   TODO_DELETE_ALL: 'TODO_DELETE_ALL',
 };
 
-let nextId = 0;
 
 export const TODO_ADD = (item) => ({
   type: actionTypes.TODO_ADD,
   payload: {
     ...item,
-    id: nextId++,
+    id: v4(),
     complete: false,
   },
 });

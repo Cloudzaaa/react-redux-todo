@@ -44,7 +44,6 @@ class FormMain extends Component {
             appearance="primary"
             intent="success"
             type="submit"
-            marginLeft={15}
           >
             Add
           </Button>
@@ -54,7 +53,7 @@ class FormMain extends Component {
         <Button
           appearance="primary"
           intent="danger"
-          marginLeft={15}
+          marginTop={15}
           onClick={this.props.onDeleteAll}
         >
           Clean List
