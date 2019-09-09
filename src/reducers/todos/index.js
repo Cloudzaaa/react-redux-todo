@@ -1,6 +1,6 @@
 import {actionTypes} from '../../actions';
 
-const initialState = [];
+export const initialState = [];
 
 const todos = (state = initialState, action) => {
   switch (action.type) {

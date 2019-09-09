@@ -3,7 +3,7 @@ import {Pane, Icon, Paragraph} from 'evergreen-ui';
 import PropTypes from 'prop-types';
 import './todo.css';
 
-const Todo = ({complete, text, onBlockClick, onBlockDelete}) => {
+export const Todo = ({complete, text, onBlockClick, onBlockDelete}) => {
   return (
     <Pane
       className="todo-block"

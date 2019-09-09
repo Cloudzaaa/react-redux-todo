@@ -1,6 +1,6 @@
 import {actionTypes} from '../../actions';
 
-const initialState = 'ALL';
+export const initialState = 'ALL';
 
 const filter = (state = initialState, action) => {
   switch (action.type) {
