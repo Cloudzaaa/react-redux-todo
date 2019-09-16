@@ -3,7 +3,7 @@ import {TextInput, Pane, Button, Heading} from 'evergreen-ui';
 import {TODO_ADD, TODO_DELETE_ALL} from '../../actions';
 import {connect} from 'react-redux';
 
-class FormMain extends Component {
+export class FormMain extends Component {
   state = {
     text: '',
   };

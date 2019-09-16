@@ -11,7 +11,6 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        {console.log(store)}
         <Pane className="App" marginTop={50} display="flex" justifyContent="center" alignItems="center" flexDirection="column" width="400px" marginLeft="auto" marginRight="auto">
           <FormMain/>
           <ActiveListControl/>
