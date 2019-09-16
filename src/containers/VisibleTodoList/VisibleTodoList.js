@@ -3,11 +3,12 @@ import {TODO_DELETE, TODO_UPD} from '../../actions';
 import {connect} from 'react-redux';
 import TodoList from '../../components/TodoList/TodoList';
 
-const getVisibleTodos = (todos, filter) => {
+export const getVisibleTodos = (todos, filter) => {
   switch (filter) {
     case 'ALL': return todos;
-    case 'COMPLETED': return todos.filter(todo => !todo.complete);
-    case 'UNCOMPLETED': return todos.filter(todo => todo.complete);
+    case 'COMPLETED': return todos.filter(todo => todo.complete);
+    case 'UNCOMPLETED': return todos.filter(todo => !todo.complete);
+    default: return todos;
   }
 };
 
